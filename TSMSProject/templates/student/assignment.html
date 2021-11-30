@@ -1,0 +1,68 @@
+{% extends 'base/student-base.html' %}
+
+{% block content %}
+<!-- NOTE -->
+<div class="content container-fluid">
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">Assignments</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="{% url 'studentDashboard' %}">Dashboard</a>
+                    </li>
+                    <li class="breadcrumb-item active">Assigments</li>
+                </ul>
+            </div>
+            <div class="col-auto text-right float-right ml-auto"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        {% for assignment in assignments %}
+        <div class="col-12 col-sm-6">
+            <div class="card">
+                <!-- One assignment card begin -->
+                <div class="col-md-12 mt-3">
+                    <h4>
+                        <a href="#">{{assignment.assignment_name}}</a> ({{assignment.assignment_grade}} marks)
+                    </h4>
+                    <div class="meta">
+                        <ul>
+
+                            <li>
+                                <i class="fas fa-calendar-alt"></i> Open Date: {{assignment.assignment_start_date}}
+                                <span>&nbsp;&nbsp;&nbsp;</span>
+                            </li>
+
+                            <li>
+                                <i class="fas fa-calendar-alt"></i> Due Date: {{assignment.assignment_end_date}}
+                                <span>&nbsp;&nbsp;&nbsp;</span>
+                            </li>
+
+                        </ul>
+                        <ul>
+                            <li>
+                                <i class="fas fa-user"> Teacher </i>
+                                <a href="#"> {{assignment.teacher}} </a>
+                            </li>
+                            <li>
+                                <i class="fas fa-users"> Class </i>
+                                <a href="#">{{assignment.assignment_class}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr />
+                    <p>{{assignment.assignment_description}}</p>
+                    <hr />
+                </div>
+                <!-- One event card begin -->
+
+                <div class="card-body"></div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<!-- NOTE -->
+{% endblock %}

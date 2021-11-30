@@ -1,0 +1,45 @@
+{% extends 'base/parent-base.html' %}
+
+{% block content %}
+<div class="content container-fluid">
+
+    <div class="page-header">
+        <!--  -->
+        <div class="row align-items-center container-fluid">
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>{{message}}</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+        <!--  -->
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="page-title">Welcome Parent</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Parent Dashboard</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Request a review for your ward -->
+    <div class="container">
+        <p class="">
+            Dear Parent, you can request for a review or report on your ward.
+        </p>
+
+        <div class="jumbotron container">
+            <h2>Click Here</h2>
+            <a href="{% url 'parent_request_review' %}" class="btn btn-primary">Request for Review</a>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

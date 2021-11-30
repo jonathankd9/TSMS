@@ -1,0 +1,135 @@
+{% extends 'base/student-base.html' %}
+
+{% block content %}
+<div class="content container-fluid">
+
+    <div class="page-header">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="page-title">Welcome Student!</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'studentDashboard' %}">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Student Dashboard</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-xl-3 col-sm-6 col-12 d-flex">
+            <div class="card bg-nine w-100">
+                <div class="card-body">
+                    <div class="db-widgets d-flex justify-content-between align-items-center">
+                        <div class="db-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="db-info">
+                            <h3>{{num_of_subjects}}</h3>
+                            <h6>All Subjects</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12 d-flex">
+            <div class="card bg-six w-100">
+                <div class="card-body">
+                    <div class="db-widgets d-flex justify-content-between align-items-center">
+                        <div class="db-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="db-info">
+                            <h3>{{num_of_assignments}}</h3>
+                            <h6>Assignments</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12 d-flex">
+            <div class="card bg-ten w-100">
+                <div class="card-body">
+                    <div class="db-widgets d-flex justify-content-between align-items-center">
+                        <div class="db-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <div class="db-info">
+                            <h3>{{num_of_events}}</h3>
+                            <h6>Events</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12 d-flex">
+            <div class="card bg-eleven w-100">
+                <div class="card-body">
+                    <div class="db-widgets d-flex justify-content-between align-items-center">
+                        <div class="db-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <div class="db-info">
+                            <h3>{{num_of_schedules}}</h3>
+                            <h6>All Schedules</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-12 col-lg-12 col-xl-12">
+            <div class="card flex-fill">
+                <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <h5 class="card-title">Current Assignment</h5>
+                        </div>
+                        <div class="col-6">
+                            <span class="float-right view-link"><a href="{% url 'student_assignment' %}">View All
+                                    Assignments</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dash-circle">
+                    <div class="row">
+                        {% for assignment in current_assignments %}
+                        <!--  -->
+                        <div class="col-12 col-sm-4 dash-widget2">
+                            <div class="card-body dash-widget1">
+                                <div class="dash-details">
+                                    <h4>{{assignment.assignment_description}}</h4>
+                                    <ul>
+
+                                        <span>
+                                            <li> <strong>Open Date</strong></li>
+                                            <li>{{assignment.assignment_start_date}}</li>
+                                        </span>
+                                    </ul>
+                                    <ul>
+                                        <span>
+                                            <li> <strong>Due Date</strong> </li>
+                                            <li>{{assignment.assignment_end_date}}</li>
+                                        </span>
+
+                                    </ul>
+                                    <div class="dash-btn">
+                                        <button type="submit" class="btn btn-info btn-border">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+{% endblock %}

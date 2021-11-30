@@ -1,0 +1,70 @@
+{% extends 'base/teacher-base.html' %}
+
+{% block content %}
+<!-- NOTE -->
+<div class="content container-fluid">
+
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">Add Event</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'teacher_event' %}">Event</a></li>
+                    <li class="breadcrumb-item active">Add Event</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <!-- <form action="{% url 'add_subject' %}" method="POST"> -->
+                    <form action="upload_event/" method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 class="form-title"><span>Event Information</span></h5>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Event Heading</label>
+                                    <input type="text" class="form-control" name="event_heading">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Event Date</label>
+                                    <input type="date" class="form-control" name="event_date">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Event Time</label>
+                                    <input type="time" class="form-control" name="event_time">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Event Description</label>
+                                    <input type="text" class="form-control" name="event_content">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <input type="submit" value="Submit" class="btn btn-small btn-primary">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- NOTE -->
+{% endblock %}

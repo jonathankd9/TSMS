@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="TSMS TASHTECH TAPAMAN SENIOR HIGH SCHOOL">
+
+    <!-- ========== Page Title ========== -->
+    <title>Tashtech - Home page</title>
+
+    <!-- ========== LOADING DJANGO STATIC FILES =========== -->
+    {% load static %}
+
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="shortcut icon" href="{% static 'general_dashboards/tashtech favicon.png' %}" />
+
+    <!-- ========== Start Stylesheet ========== -->
+    <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet" /> -->
+    <link href="{% static 'homepage/assets/css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'homepage/assets/css/font-awesome.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'homepage/assets/css/flaticon-set.css' %}" rel="stylesheet" />
+    <link href="{% static 'homepage/assets/css/elegant-icons.css' %}" rel="stylesheet" />
+    <link href="{% static 'homepage/assets/css/magnific-popup.css' %}" rel="stylesheet" />
+    <link href="{% static 'homepage/assets/css/owl.carousel.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'homepage/assets/css/owl.theme.default.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'homepage/assets/css/animate.css' %}" rel="stylesheet" />
+    <link href="{% static 'homepage/assets/css/bootsnav.css' %}" rel="stylesheet" />
+    <link href="{% static 'homepage/style.css' %}" rel="stylesheet">
+    <link href="{% static 'homepage/assets/css/responsive.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css">
+
+
+
+
+    <!-- ========== End Stylesheet ========== -->
+
+    <!-- ========== Google Fonts ========== -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Preloader Start -->
+    <div class="se-pre-con"></div>
+    <!-- Preloader Ends -->
+
+    <!-- Start Header Top 
+    ============================================= -->
+    <div class="top-bar-area address-one-lines bg-violet text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 address-info">
+                    <div class="info box">
+                        <ul>
+                            <li>
+                                <i class="fas fa-map"></i> Ghana, Oti Region
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope-open"></i> Info@tashtech.com
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i> <a href="tel:+233 558 366 133">+233 558 366 133</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="user-login text-right col-md-4">
+                    <!-- <a class="popup-with-form" href="#register-form">
+                        <i class="fas fa-edit"></i> Alumni
+                    </a> -->
+                    <a class="popup-with-form" href="#login-form">
+                        <i class="fas fa-user"></i> Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Header Top -->
+
+    <!-- Header 
+    ============================================= -->
+    <header id="home">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default attr-border navbar-sticky bootsnav">
+
+            <div class="container">
+
+                <!-- Start Atribute Navigation -->
+                <div class="attr-nav">
+                    <ul>
+                        <li class="side-menu"><a href="#"><i class="fa fa-bars"></i></a></li>
+                    </ul>
+                </div>
+                <!-- End Atribute Navigation -->
+
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="{% url 'homepage' %}">
+                        <img src="{% static 'homepage/assets/img/logo.png' %}" class="logo" alt="Logo">
+                    </a>
+                </div>
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
+                        <li>
+                            <a class="smooth-menu" href="#home">Home</a>
+                        </li>
+                        <li>
+                            <a class="smooth-menu" href="{% url 'teachers' %}">Teachers</a>
+                        </li>
+                        <li>
+                            <a class="smooth-menu" href="#about">About</a>
+                        </li>
+                        <li>
+                            <a class="smooth-menu" href="#courses">Courses</a>
+                        </li>
+                        <li>
+                            <a class="smooth-menu" href="#advisor">Heads</a>
+                        </li>
+                        <li>
+                            <a class="smooth-menu" href="#event">Event</a>
+                        </li>
+                        <li>
+                            <a class="smooth-menu" href="#blog">Blog</a>
+                        </li>
+                        <li>
+                            <a class="smooth-menu" href="#contact">contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+
+            <!-- Start Side Menu -->
+            <div class="side">
+                <a href="#" class="close-side"><i class="fa fa-times"></i></a>
+                <div class="widget">
+                    <h4 class="title">Xtras</h4>
+                    <ul>
+                        <li><a href="#">Prospectus</a></li>
+                        <!-- <li><a href="#">Portfolio</a></li> -->
+                    </ul>
+                </div>
+                <div class="widget social">
+                    <h4 class="title">Connect With Us</h4>
+                    <ul class="link">
+                        <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li class="pinterest"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                        <li class="dribbble"><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End Side Menu -->
+
+        </nav>
+        <!-- End Navigation -->
+
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Login Form 
+    ============================================= -->
+    <form action="login/" id="login-form" class="mfp-hide white-popup-block" method="POST">
+        {% csrf_token %}
+        <div class="col-md-8 login-custom">
+            <h4>login to your account!</h4>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Username*" name="username" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Password*" name="password" type="password">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <label for="login-remember"><input type="checkbox" id="login-remember">Remember Me</label>
+                    <a title="Lost Password" href="#" class="lost-pass-link">Lost your password?</a>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <input type="submit" value="Login" class="btn btn-primary btn-small">
+                </div>
+            </div>
+            <p class="link-bottom">Not a member yet? <a href="#">Register now</a></p>
+        </div>
+        <div class="col-md-4 login-custom ">
+            <div>
+                <img src="{% static 'homepage/assets/img/logo-tashtech.png' %}" alt="">
+            </div>
+            <div>
+                <img src="{% static 'homepage/assets/img/logo.png' %}" alt="">
+            </div>
+
+        </div>
+
+    </form>
+    <!-- End Login Form -->
+
+    <!-- Start Register Form 
+    ============================================= -->
+    <form action="register_alumni/" method="POST" id="register-form" class="mfp-hide white-popup-block">
+        {% csrf_token %}
+        <div class="col-md-8 login-custom">
+            <h4>Register to become an alumni</h4>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Email*" type="text" name="email">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Username*" type="text" name="username" required>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Password" type="password" name='password1' required>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Confirm Password" type="password" name="password2"
+                            required>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+
+            <div class="col-md-12">
+                <div class="row">
+                    <input type="submit" value="Submit" class="btn btn-small btn-primary">
+                </div>
+            </div>
+            <!-- NOTE: PUT A NAVIGATION LINK HERE TO NAVIGATE TO A LOGIN PAGE -->
+            <p class="link-bottom">Are you a member? <a href="#login-form">Login now</a></p>
+        </div>
+    </form>
+    <!-- End Register Form -->
+
+    <!-- Start Banner 
+    ============================================= -->
+    <div class="banner-area content-top-heading text-normal heading-weight-600">
+        <div id="bootcarousel" class="carousel slide animate_text" data-ride="carousel">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner text-light text-center">
+                <div class="item active">
+                    <div class="box-table bg-fixed shadow dark"
+                        style="background-image: url('static/homepage/assets/img/banner/24.jpg');">
+                        <div class="box-cell">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <div class="content">
+                                            <h1 data-animation="animated fadeInUp">Learn from our wide range of
+                                                <span>courses</span></h1>
+                                            <p data-animation="animated fadeInUp">
+                                                Supposing breakfast day fulfilled off depending questions. Whatever boy
+                                                her exertion his extended. Ecstatic followed handsome drawings entirely
+                                                mrs one yet outweigh. Of acceptance insipidity remarkably is invitation.
+                                            </p>
+                                            <a data-animation="animated fadeInDown"
+                                                class="btn circle btn-light effect btn-md" href="#courses">View
+                                                Courses</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% for carousel in carousels %}
+                <!--  -->
+                <div class="item">
+                    <div class="box-table shadow bg-fixed dark"
+                        style="background-image: url('{{carousel.picture.url}}');">
+                        <div class="box-cell">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <div class="content">
+                                            <h1 data-animation="animated fadeInUp">{{carousel.heading}}
+                                                <span>brilliant</span> alumni</h1>
+                                            <p data-animation="animated fadeInUp">
+                                                {{carousel.briefIntro}}
+                                            </p>
+                                            <a data-animation="animated fadeInDown"
+                                                class="btn circle btn-light effect btn-md" href="#courses">View
+                                                Courses</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                {% endfor %}
+
+                <!--  -->
+            </div>
+            <!-- End Wrapper for slides -->
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control shadow" href="#bootcarousel" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control shadow" href="#bootcarousel" data-slide="next">
+                <i class="fa fa-angle-right"></i>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </div>
+    </div>
+    <!-- End Banner -->
+
+    <!-- Start Our Features Latest Post
+    ============================================= -->
+    <div id="about" class="our-featues-area inc-trending-courses about-area default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 our-feature-items">
+                    <div class="row">
+
+                        <div class="col-md-12 less-bar info">
+                            <h5>Introduction</h5>
+                            {% for about in abouts %}
+                            <!--  -->
+                            <h1>{{about.main_heading}}<br> <small> {{about.sub_heading}}</small> </h1>
+                            <p>
+                                {{about.description}}
+                            </p>
+                            <p>
+
+                            </p>
+                            <!--  -->
+                            {% endfor %}
+                        </div>
+
+                        <!-- Start Fatures -->
+                        <div class="our-features">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="item mariner">
+                                    <div class="icon">
+                                        <i class="flaticon-faculty-shield"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h4>Expert Staff</h4>
+                                        <!-- NOTE: THIS SHOULD LINK TO A DIFFERENT PAGE DISPLAYING THE STAFF -->
+                                        <a href="#">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="item java">
+                                    <div class="icon">
+                                        <i class="flaticon-book-2"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h4>Clubs and Societies</h4>
+                                        <!-- NOTE: THIS SHOULD LINK TO A DIFFERENT PAGE DISPLAYING Clubs and Societies -->
+                                        <a href="#">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="item malachite">
+                                    <div class="icon">
+                                        <i class="flaticon-education"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h4>Scholarship</h4>
+                                        <!-- NOTE: THIS SHOULD LINK TO A DIFFERENT PAGE DISPLAYING SCHOLARSHIP OPPORTUNITIES -->
+                                        <a href="#">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="item brilliantrose">
+                                    <div class="icon">
+                                        <i class="flaticon-university-campus"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h4>Beautiful Campus</h4>
+                                        <!-- NOTE: THIS SHOULD LINK TO A DIFFERENT PAGE DISPLAYING FACILITIES OF THE SCHOOL -->
+                                        <a href="#">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Our Features -->
+
+                <!-- End Home Sidebar -->
+                <div class="col-md-4 home-sidebar">
+                    <!-- Start Latest Post -->
+                    <div class="sidebar-item latest-posts trending-courses-box">
+                        <!-- NOTE: CHANGE BACKGROUND COLOUR TO A SHADE OF VIOLET -->
+                        <h4 id="bg-violet">Latest News</h4>
+                        <div class="trending-courses-items">
+                            {% for news in latest_news %}
+                            <!--  -->
+                            <div class="item">
+                                <h4>
+                                    <a href="#">{{news.headline}}</a>
+                                </h4>
+                                <div class="meta">
+                                    <i class="fas fa-user"></i> By <a href="#">{{news.issuer}}</a>
+                                    <span><i class="fas fa-clock"></i>{{news.date}}</span>
+                                </div>
+                            </div>
+                            <!--  -->
+                            {% endfor %}
+
+                            <!-- NOTE: This should link to a different page showing all news -->
+                            <a href="#" class="more">Browse All News <i class="fas fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Latest Posts -->
+
+                    <!-- Start Online Registration -->
+                    <div class="sidebar-item online-registration">
+                        <!-- NOTE: CHANGE THE BACKGROUND COLOR TO A SHADE OF VIOLET -->
+                        <h4 class="bg-violet">Online Registration</h4>
+                        <div class="reg-form">
+                            <!-- NOTE: HANDLE FOR HERE - methon=POST, etc -->
+                            <form action="#">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input class="form-control" placeholder="Name*" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input class="form-control" placeholder="Email*" type="email">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input class="form-control" placeholder="Phone" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button class="button-sm button-theme" type="submit">
+                                            Rigister Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- End Online Registration -->
+                </div>
+                <!-- End Home Sidebar -->
+
+            </div>
+        </div>
+    </div>
+    <!-- End Our Features & Latest Post -->
+
+    <!-- Start Popular Courses 
+    ============================================= -->
+    <div id="courses" class="popular-courses bg-gray circle carousel-shadow default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="site-heading text-center">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>Popular Courses</h2>
+                        <p>
+                            Students and Alumni all over the country are launching new careers, advancing in their
+                            fields, and enriching their lives all because of our rich popular courses.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="popular-courses-items bottom-price popular-courses-carousel owl-carousel owl-theme">
+                        {% for course in courses %}
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="{{course.picture.url}}" alt="Thumb">
+                                </a>
+                                <div class="overlay">
+                                    <a class="btn btn-theme effect btn-sm" href="#">
+                                        <i class="fas fa-chart-bar"></i> {{course.name}}
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="info">
+
+                                <h4><a href="#">{{course.name}}</a></h4>
+                                <div class="cats">
+                                    <a href="#">{{course.subjects}}</a>
+                                </div>
+                                <p>
+                                    {{course.description}}
+                                </p>
+                                <div class="bottom-info">
+                                    <!-- NOTE: Any relevent info regarding course should go here -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Popular Courses -->
+
+    <!-- Start Top Categories 
+    ============================================= -->
+    <div id="top-categories" class="top-cat-area default-padding bottom-less">
+        <div class="container">
+            <div class="row">
+                <div class="site-heading text-center">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>Departments</h2>
+                        <p>
+                            Explore Our Departments with several courses and competent Head of Departments.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="top-cat-items">
+                    {% for department in departments %}
+                    <!--  -->
+                    <div class="col-md-3 col-sm-6 equal-height">
+                        <!-- NOTE: FIX BACKGROUND IMAGE HERE-->
+                        <div class="item" style="background-image: url('{{department.picture.url}}');">
+                            <a href="#">
+                                <i class="flaticon-education"></i>
+                                <div class="info">
+                                    <h4>{{department.name}}</h4>
+                                    <span>({{department.num_of_courses}}) Courses</span> <br>
+                                    <span>H.O.D: {{department.h_o_d}}</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--  -->
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Top Categories -->
+
+    <!-- Start Advisor Area
+    ============================================= -->
+    <section id="advisor" class="advisor-area bg-gray circle default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="site-heading text-center">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>Experience Heads</h2>
+                        <p>
+                            Meet the team of experienced and dedicated faculty members who are committed to their job.
+                            They strive to provide the best education and training to the students.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="advisor-carousel owl-carousel owl-theme text-center text-light">
+                        {% for head in heads %}
+                        <!-- Single Item -->
+                        <div class="advisor-item">
+                            <div class="info-box">
+                                <img src="{{head.picture.url}}" alt="Thumb">
+                                <div class="info-title">
+                                    <h4>{{head.name}}</h4>
+                                    <span>{{head.portfolio}}</span> <br>
+                                </div>
+                                <div class="overlay">
+                                    <div class="box">
+                                        <div class="content">
+                                            <div class="overlay-content">
+                                                <h4>About {{head.name}}</h4>
+                                                <p>
+                                                    {{head.briefInfo}}
+                                                </p>
+                                                <p>{{head.tel}}</p>
+                                                <a href="#">Read More</a>
+                                                <div class="social">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Item -->
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Advisor Area -->
+
+    <!-- Start Video Area
+    ============================================= -->
+    <div class="video-area padding-xl text-center bg-fixed text-light shadow dark-hard"
+        style="background-image: url('static/homepage/assets/img/banner/group2.jpeg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="video-heading">
+                        <h2>Take a short tour in our campus</h2>
+                        <p>
+                            Click on the button below to see a short video about our campus. Our serene environment,
+                            beautiful facilities and friendly staff will make you feel at home.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="video-info">
+                    <div class="overlay-video">
+                        <a class="popup-youtube video-play-button" href="https://www.youtube.com/watch?v=8GQTt50izkg">
+                            <i class="fa fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Video Area -->
+
+    <!-- Start Event
+    ============================================= -->
+    <section id="event" class="event-area circle default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="site-heading text-center">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>Upcoming Events</h2>
+                        <p>
+                            Keep yourself updated with our latest events and upcoming events.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="event-items">
+
+                    {% for event in upcoming_events %}
+                    <!-- Single Item -->
+                    <div class="item horizontal col-md-12">
+                        <div class="col-md-6 thumb bg-cover" style="background-image: url('{{event.picture.url}}');">
+                            <div class="date">
+                                <h4><span>{{event.event_date}}</span></h4>
+                            </div>
+                        </div>
+                        <div class="col-md-6 info">
+                            <h4>
+                                <a href="#">{{event.title}}</a>
+                            </h4>
+                            <div class="meta">
+                                <ul>
+                                    <li><i class="fas fa-calendar-alt"></i> {{event.event_date}}</li>
+                                    <li><i class="fas fa-clock"></i> {{event.start_time}}</li>
+                                    <li><i class="fas fa-map"></i> {{event.end_time}} </li>
+                                </ul>
+                            </div>
+                            <p>
+                                {{event.briefInfo}}
+                            </p>
+                            <a href="#" class="btn btn-dark effect btn-sm">
+                                <!-- <i class="fas fa-chart-bar"></i> Book Now -->
+                                <i class="fas fa-chart-bar"></i>
+                            </a>
+                            <a href="#" class="btn btn-gray btn-sm">
+                                <!-- <i class="fas fa-ticket-alt"></i> 23 Available -->
+                                <i class="fas fa-ticket-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Single Item -->
+                    {% endfor %}
+
+
+                    <div class="more-btn col-md-12 text-center">
+                        <a href="#" class="btn btn-dark border btn-md">View All Events</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Event -->
+
+    <!-- Start Testimonials 
+    ============================================= -->
+    <div class="testimonials-area carousel-shadow default-padding bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="site-heading text-center">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>Students Review</h2>
+                        <p>
+                            Read what our grateful students are saying about us.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="clients-review-carousel owl-carousel owl-theme">
+                        {% for review in reviews %}
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="col-md-5 thumb">
+                                <img src="{{review.picture.url}}" alt="Thumb">
+                            </div>
+                            <div class="col-md-7 info">
+                                <p>
+                                    {{review.message}}
+                                </p>
+                                <h4>{{review.name}}</h4>
+                                <span>{{review.course}}</span> <br>
+                                <span>{{review.year_batch}}</span>
+                            </div>
+                        </div>
+                        <!-- Single Item -->
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Testimonials -->
+
+    <!-- Start Blog 
+    ============================================= -->
+    <div id="blog" class="blog-area circle default-padding bottom-less">
+        <div class="container">
+            <div class="row">
+                <div class="site-heading text-center">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>News</h2>
+                        <p>
+                            Stay updated with our latest news. Written by our staff and students.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="blog-items">
+
+                    {% for news in newses %}
+                    <!-- Single Item -->
+                    <div class="col-md-4 single-item">
+                        <div class="item">
+                            <div class="thumb">
+                                <a href="#"><img src="{{news.picture.url}}" alt="Thumb"></a>
+                                <div class="date">
+                                    <!-- <h4><span>24</span> Nov, 2018</h4> -->
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h4>
+                                    <a href="#">{{news.title}}</a>
+                                </h4>
+                                <p>
+                                    {{news.overview}}
+                                </p>
+                                <a href="#">Read More <i class="fas fa-angle-double-right"></i></a>
+                                <div class="meta">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i class="fas fa-user"></i> {{news.author}}</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fas fa-calendar-alt"></i>{{news.pub_date}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Item -->
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Blog -->
+
+    <!-- Start Contact Info
+    ============================================= -->
+    <div id="contact" class="contact-info-area bg-gray default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="site-heading text-center">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>Contact us</h2>
+                        <p>
+                            Do you want to know more about us? <br>
+                            Our Courses, Upcoming Events, News, and many more. <br>
+                            Get in touch with us!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Start Contact Info -->
+                <div class="contact-info">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="item">
+                            <div class="icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="info">
+                                <h4>Call Us</h4>
+                                <!-- br : Just to keep a uniform alignment -->
+                                <br>
+                                <br>
+                                <span>0242523971 / 0508744899</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="item">
+                            <div class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info">
+                                <h4>Address</h4>
+                                <span>Tapaman Senior High Tech. School, <br> P.O. Box TP14, <br>Tapa Abotoase.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="item">
+                            <div class="icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info">
+                                <h4>Email Us</h4>
+                                <!-- br : Just to keep a uniform alignment -->
+                                <br>
+                                <br>
+                                <span>info@tashtech.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Contact Info -->
+
+                <div class="seperator col-md-12">
+                    <span class="border"></span>
+                </div>
+
+                <!-- Start Maps & Contact Form -->
+                <!-- NOTE -->
+                <div class="maps-form">
+                    <div class="col-md-6 maps">
+                        <h3>Our Location</h3>
+                        <!-- Second item  - map of the school-->
+                        <div class="col-md map-responsive">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.9834874842245!2d0.34734901448336647!3d7.467074394613421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1027c1588511749b%3A0x7933dc83b18da06c!2sTapaman%20seniour%20high%20technical!5e0!3m2!1sen!2sgh!4v1638254757593!5m2!1sen!2sgh"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                            </iframe>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 form">
+                        <div class="heading">
+                            <h3>Contact Us</h3>
+                            <p> You have any queries? Shoot us a mail. <br>
+                                Our Help Desk will get back to you as soon as possible.
+                            </p>
+                        </div>
+                        <form action="upload_mail" method="POST" class="contact-form">
+                            {% csrf_token %}
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="form-group">
+                                        <input class="form-control" id="name" name="mail_subject" placeholder="Subject"
+                                            type="text">
+                                        <span class="alert-error"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="form-group">
+                                        <input class="form-control" id="email" name="sender_mail" placeholder="Email*"
+                                            type="email">
+                                        <span class="alert-error"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="form-group">
+                                        <input class="form-control" id="phone" name="mail_phone" placeholder="Phone"
+                                            type="text">
+                                        <span class="alert-error"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="form-group comments">
+                                        <textarea class="form-control" id="comments" name="mail_body"
+                                            placeholder="Tell Me About Courses *"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="form-group">
+                                        <input class="form-control" id="phone" name="mail_date" placeholder="Phone"
+                                            type="date">
+                                        <span class="alert-error"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <input type="submit" value="Send Mail" class="btn btn-small btn-primary">
+                                    <span><i class="fa fa-paper-plane"></i></span>
+                                </div>
+                            </div>
+                            <!-- Alert Message -->
+                            <div class="col-md-12 alert-notification">
+                                <div id="message" class="alert-msg"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- End Maps & Contact Form -->
+
+            </div>
+        </div>
+    </div>
+    <!-- End Contact Info -->
+
+    <!-- Start Subscribe 
+    ============================================= -->
+    <div class="subscribe-area text-center text-light default-padding bg-fixed shadow dark-hard"
+        style="background-image: url('static/homepage/assets/img/banner/group.jpeg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="content">
+                        <h2>Subscribe now</h2>
+                        <p>Receive weekly newsletter from us! <br>
+                            We will keep you updated with upcoming events, and many more.</p>
+                    </div>
+                    <div class="form">
+                        <form action="#">
+                            {% csrf_token %}
+                            <input type="email" name="email" class="form-control" placeholder="Enter your e-mail here">
+                            <button type="submit">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Subscribe -->
+
+    <!-- Start Footer 
+    ============================================= -->
+    <footer class="bg-light default-padding-top">
+        <div class="container">
+            <div class="row">
+                <div class="f-items">
+                    <div class="col-md-6 item">
+                        <div class="f-item">
+                            <img src="{% static 'homepage/assets/img/logo.png' %}" alt="Logo">
+                            <p>
+                                Excellence decisively nay man yet impression for contrasted remarkably. There spoke
+                                happy for you are out. Fertile how old address did showing because sitting replied six.
+                                Had arose guest visit going off child she new.
+                            </p>
+                            <div class="social">
+                                <ul>
+                                    <li>
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 item">
+                        <div class="f-item recent-post">
+                            <h4>Our Location</h4>
+                            <div class="col-md map-responsive">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.9834874842245!2d0.34734901448336647!3d7.467074394613421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1027c1588511749b%3A0x7933dc83b18da06c!2sTapaman%20seniour%20high%20technical!5e0!3m2!1sen!2sgh!4v1638254757593!5m2!1sen!2sgh"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Start Footer Bottom -->
+        <div class="footer-bottom bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <p>&copy; Copyright 2021. Powered by <a href="#"> CodeLabs </a></p>
+                        </div>
+                        <div class="col-md-6 text-right link">
+                            <!-- NOTE: any other relevant footer information goes here. -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Bottom -->
+    </footer>
+    <!-- End Footer -->
+
+    <!-- jQuery Frameworks
+    ============================================= -->
+    <script src="{%static 'homepage/assets/js/jquery-1.12.4.min.js'%} "></script>
+    <script src="{%static 'homepage/assets/js/bootstrap.min.js' %}"></script>
+    <script src="{%static 'homepage/assets/js/equal-height.min.js' %}"></script>
+    <script src="{%static 'homepage/assets/js/jquery.appear.js' %}"></script>
+    <script src="{%static 'homepage/assets/js/jquery.easing.min.js' %}"></script>
+    <script src="{%static 'homepage/assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{%static 'homepage/assets/js/modernizr.custom.13711.js' %}"></script>
+    <script src="{%static 'homepage/assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{%static 'homepage/assets/js/wow.min.js' %}"></script>
+    <script src="{%static 'homepage/assets/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{%static 'homepage/assets/js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{%static 'homepage/assets/js/count-to.js' %}"></script>
+    <script src="{%static 'homepage/assets/js/loopcounter.js' %}"></script>
+    <script src="{%static 'homepage/assets/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{%static 'homepage/assets/js/bootsnav.js' %}"></script>
+    <script src="{%static 'homepage/assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

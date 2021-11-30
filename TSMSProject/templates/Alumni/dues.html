@@ -1,0 +1,69 @@
+{% extends 'base/alumni-base.html' %}
+
+{% block content %}
+<div class="content container-fluid">
+  <div class="page-header">
+    <div class="row">
+      <div class="col-sm-12">
+        <h3 class="page-title">Welcome our cherished Alumni</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-10 d-flex">
+      <div class="card flex-fill">
+        <div class="card-header">
+          <h5 class="card-title">
+            Please enter details to make payment
+          </h5>
+        </div>
+        <div class="card-body">
+          <!-- form begin -->
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <input type="tel" class="form-control" id="inputPassword4" placeholder="Tel: e.g    0242345678" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">Choose Network</label>
+              <select id="inputState" class="form-control">
+                <option selected>Select your Network Operator</option>
+                <option>AirtelTigo</option>
+                <option>Vodafone</option>
+                <option>MTN</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress2">Payment Type</label>
+              <select id="inputState" class="form-control">
+                <option selected>Choose Payment type</option>
+                <option>Dues</option>
+                <option>Donation</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="inputCity">Amount</label>
+                <input type="text" class="form-control" id="inputCity" placeholder="Enter Amount here" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="inputCity">Reference</label>
+                <input type="text" class="form-control" id="inputCity" placeholder="e.g Full Name" />
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Make Payment
+            </button>
+          </form>
+          <!-- form end -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends 'base/teacher-base.html' %} {% block content %}
+<!-- NOTE -->
+<div class="content container-fluid">
+  <div class="page-header">
+    <div class="row align-items-center">
+      <div class="col">
+        <h3 class="page-title">Add Course Material</h3>
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'teacher_event' %}">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item active">Add Course Material</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-body">
+          <!-- NOTE: change the action to upload Course Material -->
+          <form action="upload_Course Material" method="POST">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-12">
+                <h5 class="form-title">
+                  <span>Course Material Information</span>
+                </h5>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="form-group">
+                  <label>Course Material Title</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="Course_Material_name"
+                  />
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="form-group">
+                  <label>Teacher</label>
+                  <input type="text" class="form-control" name="teacher" />
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="form-group">
+                  <label>Class</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="Course Material_class"
+                  />
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6">
+                <div class="form-group">
+                  <label>Open Date</label>
+                  <input
+                    type="file"
+                    class="form-control"
+                    name="Course_Material_file"
+                  />
+                </div>
+              </div>
+
+              <div class="col-12">
+                <input
+                  type="submit"
+                  value="Post Course Material"
+                  class="btn btn-small btn-primary"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- NOTE -->
+{% endblock %}

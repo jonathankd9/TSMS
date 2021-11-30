@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    !-- LOADING STATIC FILES FROM DJANGO -->
+    {% load static %}
+
+    <!-- meta tag -->
+    <meta charset="utf-8">
+    <title>Tashtech |Teachers Page</title>
+    <meta name="description" content="">
+    <!-- responsive tag -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'teacherspage/assets/img/logo-tashtech.png' %}">
+    <!-- bootstrap v4 css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <!-- font-awesome css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+    <!-- slick css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+    <!-- rsmenu CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/rsmenu-main.css">
+    <!-- rsmenu transitions CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/rsmenu-transitions.css">
+    <!-- magnific popup css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+    <!-- flaticon css  -->
+    <link rel="stylesheet" type="text/css" href="assets/fonts/flaticon.css">
+    <!-- timeline css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/timeline.css">
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- responsive css -->
+   
+</head> <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+ 
+
+<body class="inner-page">
+    <!--Preloader area start here-->
+    <div class="book_preload">
+        <div class="book">
+            <div class="book__page"></div>
+        </div>
+    </div>
+    <!--Preloader area end here-->
+
+
+        <!--Header Start-->
+        <header id="rs-header-2" class="rs-header-2">
+            <!-- Menu Start -->
+            <div class="menu-area menu-sticky">
+                <div class="container">
+                    <div class="row rs-vertical-middle">
+                        <div class="col-lg-3 col-md-12">
+                            <div class="logo-area">
+                                <a href="../index-2-onepage.html"><img src="assets/img/logo.png" alt="logo"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-12">
+                            <div class="main-menu">
+                                <a class="rs-menu-toggle"><i class="fa fa-bars"></i>Menu</a>
+                                <nav class="rs-menu">
+                                    <ul class="nav-menu">
+                                        <!-- Home -->
+                                        <li class="menu-item-has-children"> <a href="#" class="home">Home</a>
+                                        </li>
+                                        <!-- End Home -->
+
+                                        <!--About Menu Start-->
+                                        <li class="menu-item-has-children"><a href="about.html">About Us</a>
+                                        </li>
+                                        <!--About Menu End-->
+
+                                        <!--Courses Menu Start-->
+                                        <li class="menu-item-has-children"> <a href="#">Courses</a>
+                                        </li>
+                                        <!--Courses Menu End-->
+
+                                        <!--Events Menu Start-->
+                                        <li class="menu-item-has-children"> <a href="#">Events</a>
+                                        </li>
+                                        <!--Events Menu End-->
+
+                                        <!--Contact Menu Start-->
+                                        <li> <a href="contact.html">Contact</a></li>
+                                        <!--Contact Menu End-->
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Menu End -->
+        </header>
+        <!--Header End-->
+
+    </div>
+    <!--Full width header End-->
+
+    <!-- Breadcrumbs Start -->
+    <div class="rs-breadcrumbs bg7 breadcrumbs-overlay">
+        <div class="breadcrumbs-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 class="page-title">OUR TEACHERS</h1>
+                        <ul>
+                            <li>
+                                <a class="active" href="index.html">Home</a>
+                            </li>
+                            <li>Our Teachers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumbs End -->
+
+    <!-- Team Start -->
+    <div id="rs-team-2" class="rs-team-2 team-page sec-spacer">
+        <div class="container">
+            <div class="gridFilter">
+                <button class="active" data-filter="*">ALL</button>
+                <button data-filter=".filter1">SCIENCE</button>
+                <button data-filter=".filter2">BUSINESS STUDIES</button>
+                <button data-filter=".filter3">ARTS</button>
+                <button data-filter=".filter4">DIPLOMA</button>
+            </div>
+            <div class="row grid">
+                <div class="col-lg-3 col-md-6 col-xs-6 grid-item filter1">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <a href="#"><img src="assets/images/teachers/1.jpg" alt="" /></a>
+                            <div class="social-icon">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-body">
+                            <a href="teachers-single.html">
+                                <h3 class="name">Md. Abdur Rahid</h3>
+                            </a>
+                            <span class="designation">Science</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-xs-6 grid-item filter2">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <a href="#"><img src="assets/images/teachers/2.jpg" alt="" /></a>
+                            <div class="social-icon">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-body">
+                            <a href="teachers-single.html">
+                                <h3 class="name">Mahabub Alam</h3>
+                            </a>
+                            <span class="designation">Business Studies</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-xs-6 grid-item filter3">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <a href="#"><img src="assets/images/teachers/3.jpg" alt="" /></a>
+                            <div class="social-icon">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-body">
+                            <a href="teachers-single.html">
+                                <h3 class="name">Jesika Helan</h3>
+                            </a>
+                            <span class="designation">Arts</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-xs-6 grid-item filter4">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <a href="#"><img src="assets/images/teachers/4.jpg" alt="" /></a>
+                            <div class="social-icon">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-body">
+                            <a href="teachers-single.html">
+                                <h3 class="name">Deluar Khan</h3>
+                            </a>
+                            <span class="designation">Diploma</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-xs-6 grid-item filter1">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <a href="#"><img src="assets/images/teachers/5.jpg" alt="" /></a>
+                            <div class="social-icon">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-body">
+                            <a href="teachers-single.html">
+                                <h3 class="name">Alex Hilfisher</h3>
+                            </a>
+                            <span class="designation">Science</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-xs-6 grid-item filter2">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <a href="#"><img src="assets/images/teachers/6.jpg" alt="" /></a>
+                            <div class="social-icon">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-body">
+                            <a href="teachers-single.html">
+                                <h3 class="name">Naila Naime</h3>
+                            </a>
+                            <span class="designation">Business Studies</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-xs-6 grid-item filter3">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <a href="#"><img src="assets/images/teachers/7.jpg" alt="" /></a>
+                            <div class="social-icon">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-body">
+                            <a href="teachers-single.html">
+                                <h3 class="name">Shoykot Hassan</h3>
+                            </a>
+                            <span class="designation">Arts</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-xs-6 grid-item filter4">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <a href="#"><img src="assets/images/teachers/8.jpg" alt="" /></a>
+                            <div class="social-icon">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-body">
+                            <a href="teachers-single.html">
+                                <h3 class="name">Eyamin Hossain</h3>
+                            </a>
+                            <span class="designation">Diploma</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-xs-6 grid-item filter1">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <a href="#"><img src="assets/images/teachers/9.jpg" alt="" /></a>
+                            <div class="social-icon">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-body">
+                            <a href="teachers-single.html">
+                                <h3 class="name">Nuhan Freddy</h3>
+                            </a>
+                            <span class="designation">Science</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-xs-6 grid-item filter2">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <a href="#"><img src="assets/images/teachers/10.jpg" alt="" /></a>
+                            <div class="social-icon">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-body">
+                            <a href="teachers-single.html">
+                                <h3 class="name">Istiak Hossain</h3>
+                            </a>
+                            <span class="designation">Business Studies</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-xs-6 grid-item filter3">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <a href="#"><img src="assets/images/teachers/11.jpg" alt="" /></a>
+                            <div class="social-icon">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-body">
+                            <a href="teachers-single.html">
+                                <h3 class="name">Rhusda D’suza</h3>
+                            </a>
+                            <span class="designation">Arts</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-xs-6 grid-item filter4">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <a href="#"><img src="assets/images/assets/teachers/12.jpg" alt="" /></a>
+                            <div class="social-icon">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-body">
+                            <a href="teachers-single.html">
+                                <h3 class="name">Masud Rana</h3>
+                            </a>
+                            <span class="designation">Diploma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item disabled"><a class="page-link fa fa-angle-left" href="#" tabindex="-1"></a></li>
+                    <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link dotted" href="#">...</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#">6</a></li>
+                    <li class="page-item"><a class="page-link fa fa-angle-right" href="#"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- Team End -->
+
+   
+    <!-- start scrollUp  -->
+    <div id="scrollUp">
+        <i class="fa fa-angle-up"></i>
+    </div>
+
+    <!-- Search Modal Start -->
+    <div aria-hidden="true" class="modal fade search-modal" role="dialog" tabindex="-1">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true" class="fa fa-close"></span>
+	        </button>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="search-block clearfix">
+                    <form>
+                        <div class="form-group">
+                            <input class="form-control" placeholder="eg: Computer Technology" type="text">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search Modal End -->
+
+    <!-- modernizr js -->
+    <script src="assets/js/modernizr-2.8.3.min.js"></script>
+    <!-- jquery latest version -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- owl.carousel js -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- slick.min js -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- isotope.pkgd.min js -->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- imagesloaded.pkgd.min js -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <!-- wow js -->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- counter top js -->
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- magnific popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- rsmenu js -->
+    <script src="assets/js/rsmenu-main.js"></script>
+    <!-- plugins js -->
+    <script src="assets/js/plugins.js"></script>
+    <!-- main js -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

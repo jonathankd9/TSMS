@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Content Manager - Dashboard</title>
+
+    <!-- ========== LOADING DJANGO STATIC FILES =========== -->
+    {% load static %}
+
+    <link rel="shortcut icon" href="{% static 'general_dashboards/tashtech favicon.png' %}" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&display=swap">
+
+    <link rel="stylesheet" href="{% static 'general_dashboards/assets/plugins/bootstrap/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'general_dashboards/assets/plugins/fontawesome/css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'general_dashboards/assets/plugins/fontawesome/css/all.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'general_dashboards/assets/css/style.css' %}">
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+
+        <div class="header">
+
+            <div class="header-left">
+                <a href="index.html" class="logo">
+                    <img src="{% static 'general_dashboards/TASHTECh logo.png' %}" alt="Logo">
+                </a>
+                <a href="index.html" class="logo logo-small">
+                    <img src="{% static 'general_dashboards/tashtech favicon.png' %}" alt="Logo" width="30" height="30">
+                </a>
+            </div>
+
+            <a href="javascript:void(0);" id="toggle_btn">
+                <i class="fas fa-align-left"></i>
+            </a>
+
+            <div class="top-nav-search">
+                <form>
+                    <input type="text" class="form-control" placeholder="Search here">
+                    <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+
+
+            <a class="mobile_btn" id="mobile_btn">
+                <i class="fas fa-bars"></i>
+            </a>
+
+
+            <ul class="nav user-menu">
+
+                <li class="nav-item dropdown has-arrow">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                        <span class="user-img"><img class="rounded-circle"
+                                src="{% static 'general_dashboards/assets/img/profiles/avatar-01.jpg' %}" width="31"
+                                alt="Ryan Taylor"></span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="user-header">
+                            <div class="avatar avatar-sm">
+                                <img src="{% static 'general_dashboards/assets/img/profiles/avatar-01.jpg" alt="User Image"
+                                    class="avatar-img rounded-circle">
+                            </div>
+                            <div class="user-text">
+                                <h6>Ryan Taylor</h6>
+                                <p class="text-muted mb-0">Administrator</p>
+                            </div>
+                        </div>
+                        <a class="dropdown-item" href="profile.html">My Profile</a>
+                        <!-- <a class="dropdown-item" href="inbox.html">Inbox</a> -->
+                        <a class="dropdown-item" href="login.html">Logout</a>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">
+                            <span>Main Menu</span>
+                        </li>
+                        <li class="submenu active">
+                            <a href="{% url 'cmanager' %}"><i class="fas fa-user-graduate"></i> <span> Dashboard</span>
+                                <span class="menu-arrow"></span></a>
+                                <ul>
+                                    <li><a href="#" class="active">Content Manger Dashboard</a></li>
+                                    <!-- <li><a href="teacher-dashboard.html">Teacher Dashboard</a></li>
+                                <li><a href="student-dashboard.html">Student Dashboard</a></li> -->
+                                </ul>
+                </li>
+
+                <li>
+                    <a href="{% url 'cmanager_courses' %}"><i class="fas fa-user-graduate"></i> <span>
+                            Courses</span></a>
+
+                </li>
+                <li>
+                    <a href="{% url 'cmanager_departments' %}"><i class="fas fa-building"></i> <span>
+                            Departments</span></a>
+
+                </li>
+
+                <li>
+                    <a href="{% url 'cmanager_experience_heads' %}"><i class="fas fa-building"></i> <span> Experience
+                            Heads</span></a>
+
+                </li>
+
+                <li>
+                    <a href="{% url 'cmanager_carousel' %}"><i class="fas fa-building"></i> <span> Carousel</span></a>
+
+                </li>
+                <li>
+                    <a href="{% url 'cmanager_students_review' %}"><i class="fas fa-building"></i> <span> Students
+                            Review</span></a>
+
+                </li>
+
+                <li>
+                    <a href="{% url 'cmanager_latest_news' %}"><i class="fas fa-building"></i> <span> Latest
+                            News</span></a>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="page-wrapper">
+        <!-- NOTE -->
+        {% block content %}
+
+        {% endblock %}
+        <!-- NOTE -->
+
+        <footer>
+            <p>Copyright © 2021 <a href="#">CodeLabs</a></p>
+        </footer>
+
+    </div>
+
+    </div>
+
+
+    <script src=" {% static 'general_dashboards/assets/js/jquery-3.6.0.min.js' %}"></script>
+
+    <script src="{% static 'general_dashboards/assets/js/popper.min.js' %}">
+    </script>
+    <script src="{% static 'general_dashboards/assets/plugins/bootstrap/js/bootstrap.min.js' %}">
+    </script>
+
+    <script src="{% static 'general_dashboards/assets/plugins/slimscroll/jquery.slimscroll.min.js' %}">
+    </script>
+
+    <script src="{% static 'general_dashboards/assets/plugins/apexchart/apexcharts.min.js' %}">
+    </script>
+    <script src="{% static 'general_dashboards/assets/plugins/apexchart/chart-data.js' %}">
+    </script>
+
+    <script src="{% static 'general_dashboards/assets/js/script.js' %}">
+    </script>
+</body>
+
+</html>

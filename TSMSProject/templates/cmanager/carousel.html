@@ -1,0 +1,63 @@
+{% extends 'base/cmanager.html' %}
+
+{% block content %}
+<div class="content container-fluid">
+
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">Carousel</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Carousel Update</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Insert content here -->
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 class="form-title"><span>Update Carousel</span></h5>
+                            </div>
+                            <div class="col-12 col-sm-9">
+                                <div class="form-group">
+                                    <label>Headline</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Sub-heading</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+
+                            <div class="col-12">
+                                <h5 class="form-title"><span>Upload Image</span></h5>
+                            </div>
+
+                            <!-- <label class="form-label" for="customFile">Default file input example</label><br> -->
+                            <input type="file" class="form-control col-12 col-sm-6" id="customFile" />
+
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-primary">Post</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

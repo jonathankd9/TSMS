@@ -1,0 +1,79 @@
+{% extends 'base/parent-base.html' %}
+
+{% block content %}
+<div class="content container-fluid">
+
+    <div class="page-header">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="page-title">Welcome Parent!</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Parent Dashboard</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Request a review for your ward -->
+    <div class="container">
+        <p class="">
+            Dear Parent, fill the form below to request for a review or report of your ward.
+        </p>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="upload_request_review" method="POST">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5 class="form-title"><span>Review Request</span></h5>
+                                </div>
+                                <div class="col-12 col-sm-9">
+                                    <div class="form-group">
+                                        <label>Student Name</label>
+                                        <input type="text" class="form-control" required name="review_student">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Department</label>
+                                        <input type="text" class="form-control" required name="review_department">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Class</label>
+                                        <input type="text" class="form-control" required name="review_class">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Parent Email</label>
+                                        <input type="text" class="form-control" name="review_mail">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Parent Phone Number</label>
+                                        <input type="tel" class="form-control" name="review_number" required>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input type="submit" class="ml-4 btn btn-small btn-primary"
+                                            value="Request Review">
+                                    </div>
+
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}

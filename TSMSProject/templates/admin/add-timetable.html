@@ -1,0 +1,90 @@
+{% extends '../base/admin-base.html' %}
+
+{% block content %}
+<!-- NOTE -->
+<div class="content container-fluid">
+
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">Add Schedule to Timetable</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'admin_timetable' %}">Timetable</a></li>
+                    <li class="breadcrumb-item active">Add Schedule</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <!-- <form action="{% url 'add_subject' %}" method="POST"> -->
+                    <form action="upload_timetable/" method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 class="form-title"><span>Schedule Information</span></h5>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Form</label>
+                                    <input type="number" class="form-control" name="form">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Subject</label>
+                                    <input type="text" class="form-control" name="subject">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>teacher</label>
+                                    <input type="text" class="form-control" name="teacher">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Day</label>
+                                    <select class="form-control" name="day">
+                                        <option value="Monday">Monday</option>
+                                        <option value="Tuesday">Tuesday</option>
+                                        <option value="Wednesday">Wednesday</option>
+                                        <option value="Thursday">Thursday</option>
+                                        <option value="Friday">Friday</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Start Time</label>
+                                    <input type="time" class="form-control" name="start_time">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>End Time</label>
+                                    <input type="time" class="form-control" name="end_time">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <input type="submit" value="Submit" class="btn btn-small btn-primary">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- NOTE -->
+
+{% endblock %}

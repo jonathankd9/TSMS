@@ -1,0 +1,161 @@
+{% extends 'base/accounts-base.html' %}
+
+{% block content %}
+<!-- NOTE -->
+<div class="content container-fluid">
+  <div class="page-header">
+    <div class="row">
+      <div class="col-sm-12">
+        <h3 class="page-title">Welcome {{user.username}}</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-4 col-sm-6 col-12 d-flex">
+      <div class="card bg-one w-100">
+        <div class="card-body">
+          <div class="
+                      db-widgets
+                      d-flex
+                      justify-content-between
+                      align-items-center
+                    ">
+            <div class="db-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <div class="db-info">
+              <h3>₵ 1205</h3>
+              <h6>Dues</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-4 col-sm-6 col-12 d-flex">
+      <div class="card bg-three w-100">
+        <div class="card-body">
+          <div class="
+                      db-widgets
+                      d-flex
+                      justify-content-between
+                      align-items-center
+                    ">
+            <div class="db-icon">
+              <i class="fas fa-building"></i>
+            </div>
+            <div class="db-info">
+              <h3>₵ 2065</h3>
+              <h6>Donations</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4 col-sm-6 col-12 d-flex">
+      <div class="card bg-four w-100">
+        <div class="card-body">
+          <div class="
+                      db-widgets
+                      d-flex
+                      justify-content-between
+                      align-items-center
+                    ">
+            <div class="db-icon">
+              <i class="fas fa-file-invoice-dollar"></i>
+            </div>
+            <div class="db-info">
+              <h3>₵ 50512</h3>
+              <h6>Funds</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 d-flex">
+      <div class="card flex-fill">
+        <div class="card-header">
+          <h5 class="card-title">Best Students</h5>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover table-center">
+              <thead class="thead-light">
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th class="text-center">Best 6</th>
+                  <th class="text-center">Overall 8</th>
+                  <th class="text-right">Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-nowrap">
+                    <div>PRE2209</div>
+                  </td>
+                  <td class="text-nowrap">John Smith</td>
+                  <td class="text-center">10</td>
+                  <td class="text-center">15</td>
+                  <td class="text-right">
+                    <div>2019</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-nowrap">
+                    <div>PRE1245</div>
+                  </td>
+                  <td class="text-nowrap">Jolie Hoskins</td>
+                  <td class="text-center">8</td>
+                  <td class="text-center">11</td>
+                  <td class="text-right">
+                    <div>2018</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-nowrap">
+                    <div>PRE1625</div>
+                  </td>
+                  <td class="text-nowrap">Pennington Joy</td>
+                  <td class="text-center">12</td>
+                  <td class="text-center">14</td>
+                  <td class="text-right">
+                    <div>2017</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-nowrap">
+                    <div>PRE2516</div>
+                  </td>
+                  <td class="text-nowrap">Millie Marsden</td>
+                  <td class="text-center">13</td>
+                  <td class="text-center">16</td>
+                  <td class="text-right">
+                    <div>2016</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-nowrap">
+                    <div>PRE2209</div>
+                  </td>
+                  <td class="text-nowrap">John Smith</td>
+                  <td class="text-center">6</td>
+                  <td class="text-center">10</td>
+                  <td class="text-right">
+                    <div>2015</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- NOTE -->
+{% endblock %}

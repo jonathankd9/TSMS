@@ -1,0 +1,92 @@
+{% extends 'base/teacher-base.html' %}
+
+{% block content %}
+<!-- NOTE -->
+<div class="content container-fluid">
+
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">Add Assignment</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'teacher_event' %}">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Add Assignment</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <!-- NOTE: change the action to upload assignment -->
+                    <form action="upload_assignment" method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 class="form-title"><span>Assignment Information</span></h5>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Assignment Title</label>
+                                    <input type="text" class="form-control" name="assignment_name">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Teacher</label>
+                                    <input type="text" class="form-control" name="teacher">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Class</label>
+                                    <input type="text" class="form-control" name="assignment_class">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Open Date</label>
+                                    <input type="date" class="form-control" name="assignment_start_date">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Due Date</label>
+                                    <input type="date" class="form-control" name="assignment_end_date">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Grade Scale</label>
+                                    <input type="number" class="form-control" name="assignment_grade">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-12">
+                                <div class="form-group">
+                                    <label>Assignment Instruction</label>
+                                    <div class="form-group">
+                                        <input class="form-control input-lg" id="add_assignment" type="text"
+                                            name="assignment_description">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <input type="submit" value="Post Assignment" class="btn btn-small btn-primary">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- NOTE -->
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'base/admin-base.html' %}
+
+
+{% block content %}
+<!-- NOTE -->
+<div class="content container-fluid">
+
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">Add Star Student</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'add_star_std' %}">Start Students</a></li>
+                    <li class="breadcrumb-item active">Add Star Student</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <form action="upload_star_student" method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 class="form-title"><span>Star Student Information</span></h5>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Student Name</label>
+                                    <input type="text" class="form-control" name="full_name">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Index Number</label>
+                                    <input type="text" class="form-control" name="index">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Best 6 Subjects</label>
+                                    <input type="number" class="form-control" name="best_six">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Overall 8 Subjects</label>
+                                    <input type="number" class="form-control" name="overall_eight">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Date Completed</label>
+                                    <input type="date" class="form-control" name="year">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <input type="submit" value="Submit" class="btn btn-small btn-primary">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- NOTE -->
+{% endblock %}

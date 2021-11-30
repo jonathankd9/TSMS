@@ -1,0 +1,168 @@
+{% extends '../base/admin-base.html' %}
+
+
+{% block content %}
+<!-- NOTE -->
+<div class="content container-fluid">
+
+    <div class="content container-fluid">
+
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">Fees Collected</h3>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Fees Collected</li>
+                    </ul>
+                </div>
+                <div class="col-auto text-right float-right ml-auto">
+                    <a href="#" class="btn btn-outline-primary mr-2"><i class="fas fa-download"></i>
+                        Download</a>
+                    <a href="add-fees-collection.html" class="btn btn-primary"><i class="fas fa-plus"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-table">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-center mb-0 datatable">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Reference</th>
+                                        <th>Fees Type</th>
+                                        <th>Amount</th>
+                                        <th>Paid Date</th>
+                                        <th class="text-right">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>PRE2209</td>
+
+                                        <td>Kofi</td>
+                                        <td>SRC Fees</td>
+                                        <td>$120</td>
+                                        <td>17 Aug 2020</td>
+                                        <td class="text-right">
+                                            <span class="badge badge-success">Success</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>PRE2213</td>
+
+                                        <td>angie</td>
+                                        <td>Alumni Dues</td>
+                                        <td>$56</td>
+                                        <td>05 Aug 2020</td>
+                                        <td class="text-right">
+                                            <span class="badge badge-success">Success</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>PRE2143</td>
+
+                                        <td>joe's fees</td>
+                                        <td>Exam Fees</td>
+                                        <td>$378</td>
+                                        <td>04 Sept 2020</td>
+                                        <td class="text-right">
+                                            <span class="badge badge-success">Pending</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>PRE2431</td>
+                                        <td>stigar's fees</td>
+                                        <td>Exam Fees</td>
+                                        <td>$246</td>
+                                        <td>17 Sept 2020</td>
+                                        <td class="text-right">
+                                            <span class="badge badge-danger">Pending</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>PRE1534</td>
+                                        <td>some bill</td>
+                                        <td>Classes Fees</td>
+                                        <td>$56</td>
+                                        <td>02 Oct 2020</td>
+                                        <td class="text-right">
+                                            <span class="badge badge-danger">Successful</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>PRE2153</td>
+                                        <td>eric's</td>
+                                        <td>Exam Fees</td>
+                                        <td>$236</td>
+                                        <td>28 Oct 2020</td>
+                                        <td class="text-right">
+                                            <span class="badge badge-danger">Success</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>PRE1252</td>
+                                        <td>ernest's fees</td>
+                                        <td>Transport Fees</td>
+                                        <td>$237</td>
+                                        <td>17 Oct 2020</td>
+                                        <td class="text-right">
+                                            <span class="badge badge-success">Pending</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>PRE1434</td>
+                                        <td>sika's fees</td>
+                                        <td>School Fees</td>
+                                        <td>$567</td>
+                                        <td>05 Nov 2020</td>
+                                        <td class="text-right">
+                                            <span class="badge badge-success">Success</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>PRE2345</td>
+                                        <td>prince's dues</td>
+                                        <td>Exam Fees</td>
+                                        <td>$564</td>
+                                        <td>12 Nov 2020</td>
+                                        <td class="text-right">
+                                            <span class="badge badge-success">Success</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>PRE2365</td>
+                                        <td>mk atta's dues</td>
+                                        <td>Test fees</td>
+                                        <td>$234</td>
+                                        <td>15 Nov 2020</td>
+                                        <td class="text-right">
+                                            <span class="badge badge-success">Success</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>PRE1234</td>
+                                        <td>src dues</td>
+                                        <td>src Fees</td>
+                                        <td>$278</td>
+                                        <td>17 Nov 2020</td>
+                                        <td class="text-right">
+                                            <span class="badge badge-success">Pending</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- NOTE -->
+{%% endblock %}

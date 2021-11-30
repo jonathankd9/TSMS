@@ -1,0 +1,64 @@
+{% extends 'base/help_desk-base.html' %}
+
+{% block content %}
+<!-- NOTE -->
+<div class="content container-fluid">
+
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">Received Mails</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'studentDashboard' %}">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Received Mails</li>
+                </ul>
+            </div>
+            <div class="col-auto text-right float-right ml-auto">
+                <a href="#" class="btn btn-outline-primary mr-2"><i class="fas fa-download"></i>
+                    Download</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card card-table">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-center mb-0 datatable">
+                            <thead>
+                                <tr>
+                                    <th>Sender Mail</th>
+                                    <th>Sender Phone</th>
+                                    <th>Message Title</th>
+                                    <th>Message</th>
+                                    <th>Message Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!--  -->
+                                {% for mail in mails %}
+                                <tr>
+                                    <td>
+                                        <h2>
+                                            <a>{{mail.sender_mail}}</a>
+                                        </h2>
+                                    </td>
+                                    <td>{{mail.mail_phone}}</td>
+                                    <td>{{mail.mail_subject}}</td>
+                                    <td>{{mail.mail_body}}</td>
+                                    <td>{{mail.mail_date}}</td>
+                                    <!-- <td class="text-right"></td> -->
+                                </tr>
+                                {% endfor %}
+                                <!--  -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- NOTE -->
+{% endblock %}

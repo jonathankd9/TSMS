@@ -1,0 +1,65 @@
+{% extends 'base/help_desk-base.html' %}
+
+{% block content %}
+<!-- NOTE -->
+<div class="content container-fluid">
+
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">Requests</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'studentDashboard' %}">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Received Requests</li>
+                </ul>
+            </div>
+            <div class="col-auto text-right float-right ml-auto">
+                <a href="{% url 'export_request_review_list' %}" class="btn btn-outline-primary mr-2"><i
+                        class="fas fa-download"></i>
+                    Download</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card card-table">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-center mb-0 datatable">
+                            <thead>
+                                <tr>
+                                    <th>Student Name</th>
+                                    <th>Student Class</th>
+                                    <th>Student Department</th>
+                                    <th>Parent Mail</th>
+                                    <th>Parent Number</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!--  -->
+                                {% for review in review_requests %}
+                                <tr>
+                                    <td>
+                                        <h2>
+                                            <a>{{review.review_student}}</a>
+                                        </h2>
+                                    </td>
+                                    <td>{{review.review_class}}</td>
+                                    <td>{{review.review_department}}</td>
+                                    <td>{{review.review_mail}}</td>
+                                    <td>{{review.review_number}}</td>
+                                    <!-- <td class="text-right"></td> -->
+                                </tr>
+                                {% endfor %}
+                                <!--  -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- NOTE -->
+{% endblock %}

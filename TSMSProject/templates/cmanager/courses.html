@@ -1,0 +1,65 @@
+{% extends 'base/cmanager.html' %}
+
+{% block content %}
+<div class="content container-fluid">
+
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">Courses</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Courses</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+   
+                    <!-- Insert Content Here -->
+
+<div class="row">
+<div class="col-sm-12">
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="form-title"><span>Add Courses</span></h5>
+                    </div>
+                    <div class="col-12 col-sm-9">
+                        <div class="form-group">
+                            <label>Course Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                            <label>Languages or Skills</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col-12">
+                        <h5 class="form-title"><span>Course Description</span></h5>
+                    </div>
+                    <div class="container mt-5 mb-5">
+                        <textarea id="assignment">
+
+                                    </textarea>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Post</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+{% endblock %}
+
