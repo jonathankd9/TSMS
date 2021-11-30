@@ -1,7 +1,7 @@
 from pathlib import Path
 
 import os
-import dj_database_url
+# import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -142,5 +142,5 @@ EMAIL_HOST_PASSWORD = 'JCRmsh12345'
 PAYHUB_TOKEN = '605c4bc8f16040ce7180715fbdfde75a2db8585da73a666deaa5f5556edfcd3f'
 
 
-prod_db = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(prod_db)
+# prod_db = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(prod_db)
